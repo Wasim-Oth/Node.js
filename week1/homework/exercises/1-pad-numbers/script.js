@@ -16,6 +16,12 @@
  *   where to use `exports` and where `require`?
  */
 
-let numbers = [ "12", "846", "2", "1236" ];
 
 // YOUR CODE GOES HERE
+
+const padleft = require('./padLeft')
+
+const numbers = [ "12", "846", "2", "1236" ];
+const result = numbers.map(number => padleft(number, 5, ' '));
+console.log(result)
+
