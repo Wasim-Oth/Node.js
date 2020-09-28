@@ -8,6 +8,11 @@
  *
  */
 
-let numbers = [ "12", "846", "2", "1236" ];
+// let numbers = [ "12", "846", "2", "1236" ];
 
 // YOUR CODE GOES HERE
+const leftPad = require("left-pad")
+
+let numbers = [ "12", "846", "2", "1236" ];
+let result = numbers.map(number => leftPad(number, 8, ' '));
+console.log(result)
