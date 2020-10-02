@@ -21,7 +21,7 @@
 
 const padleft = require('./padLeft')
 
-const numbers = [ "12", "846", "2", "1236" ];
-const result = numbers.map(number => padleft(number, 5, ' '));
+const numbers = [ "12", "846", "2", "1236" ]
+const result = numbers.map(number => padleft(number, 5, ' '))
 console.log(result)
 
