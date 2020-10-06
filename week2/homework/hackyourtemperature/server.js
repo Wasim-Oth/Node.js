@@ -6,10 +6,10 @@ const app = express()
 
 // handelebars middleware
 app.set('view engine', 'handlebars');
-app.engine('handlebars', exphbs({ defaultLayout: false }));
+app.engine('handlebars', exphbs({ defaultLayout: false }))
 
 app.get('/', (req, res) => res.render('index'))
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }))
 
 app.post('/weather', (req, res) =>{
     let cityName = req.body.cityName
