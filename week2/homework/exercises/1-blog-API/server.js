@@ -1,8 +1,7 @@
 const express = require('express')
-const fs = require("fs");
-// const { title } = require('process');
+const fs = require("fs")
 const app = express()
-app.use(express.json());
+app.use(express.json())
  
 
 // YOUR CODE GOES IN HERE
@@ -16,7 +15,7 @@ app.post('/blogs', (req, res) => {
    title = req.body.title
    content = req.body.content
   res.setHeader("Content-Type", "application/json")
-  fs.writeFileSync(title, content);
+  fs.writeFileSync(title, content)
   res.send('ok')
 })
 
@@ -25,7 +24,7 @@ app.put('/post/:title', (req, res) => {
     content= req.body.content
 if ( fs.existsSync(title)){
       res.setHeader("Content-Type", "application/json")
-      fs.writeFileSync(title, content);
+      fs.writeFileSync(title, content)
       res.end('ok')
     } else {
       error(res)
