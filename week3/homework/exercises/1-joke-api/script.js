@@ -13,10 +13,13 @@
  const fetch = require ('node-fetch')
 
 async function printChuckNorrisJoke() {
+  try{
   const url = 'http://api.icndb.com/jokes/random' 
   const response = await fetch (url)
   const data = await response.json()
   console.log(data.value.joke)
+  } catch (error){
+    console.log(`ooh noo! ${error}`)}
 }
 
 printChuckNorrisJoke();
