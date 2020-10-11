@@ -1,0 +1,22 @@
+body{
+    background-image: linear-gradient(to right, #327967, #7cd6a9);
+    text-align: center;
+    padding: 2rem;
+}
+
+.submit{
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.result{
+    background-color: white;
+    max-width: 20rem;
+    height: 4rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px black;
+}
