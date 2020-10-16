@@ -14,7 +14,6 @@ function error(res){
 app.post('/blogs', (req, res) => {
    title = req.body.title
    content = req.body.content
-  res.setHeader("Content-Type", "application/json")
   fs.writeFileSync(title, content)
   res.send('ok')
 })
@@ -23,7 +22,6 @@ app.put('/post/:title', (req, res) => {
     title = req.body.title
     content= req.body.content
 if ( fs.existsSync(title)){
-      res.setHeader("Content-Type", "application/json")
       fs.writeFileSync(title, content)
       res.end('ok')
     } else {
@@ -44,7 +42,6 @@ app.delete('/blogs/:title', (req, res) =>{
 app.get('/blogs/:title', (req, res) =>{
    title = req.params.title
  if ( fs.existsSync(title)){
-   res.setHeader("Content-Type", "application/json")
    res.send(fs.readFileSync(title))
  } else {
   error(res)
