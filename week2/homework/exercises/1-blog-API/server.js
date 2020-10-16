@@ -19,7 +19,7 @@ app.post('/blogs', (req, res) => {
 })
 
 app.put('/post/:title', (req, res) => {
-    title = req.body.title
+    title = req.params.title
     content= req.body.content
 if ( fs.existsSync(title)){
       fs.writeFileSync(title, content)
